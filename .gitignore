@@ -1,0 +1,12 @@
+## 파일 무시
+sub1.html
+sub2.html
+
+css/sub1.css
+css/sub2.css
+
+js/jquery-1.12.4.js
+
+## 다음과 같은 확장자는 전체 무시
+
+## 폴더 무시
