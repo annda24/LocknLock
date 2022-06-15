@@ -1,0 +1,158 @@
+/* layout.css */
+
+
+/* 폰트 */
+/* 영문폰트  */
+/* NotoSans 400 700 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+/* roboto 400 500 700 900 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* 한글폰트 */
+/* NotoSansKR 400 500 700 900 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+/* common */
+body {font-size:14px;line-height:1.4;font-family:'Roboto','Noto Sans','Noto Sans KR',Heivetica,sans-serif;color:#101810;overflow-x:hidden;}
+a {text-decoration:none;color:#101810;cursor:pointer;}
+
+@keyframes gnb_open {
+    0% {transform:scaleY(0);height:0;}
+    100% {transform:scaleY(1);height:100%;}
+}
+
+@keyframes gnb_close {
+    0% {transform:scaleY(1);height:100%;}
+    100% {transform:scaleY(0);height:0;}
+}
+
+/* .underbar */
+.underbar > li > a:after {content:'';position:absolute;bottom:-1px;left:0;background:#101820;
+    transition:all .4s ease-in-out 0s;width:0;height:2px;opacity:0;}
+.leftbar > li:after {content:"|";margin:0 10px;color:#54565b;padding:0;}
+.leftbar > li:last-of-type:after {content:"";margin-right:0;}
+    
+.underbar > li > a:hover:after {width:100%;opacity:1;}
+
+/* a.more */
+a.more {position:relative;display:inline-block;box-sizing:border-box;color:#101820;font-size:17px;border:1px solid #101820;padding:15px 30px;}
+a.more {transition:color 0.3s cubic-bezier(0.25, 0.45, 0.5, 1);}
+.main_visual a.more, .content08 a.more {color:#fff;border-color:#fff;}
+a.more:hover {color:#fff;border-color:#0071E3;}
+
+a.more>span{position:absolute;left:0;top:0;z-index:-1;width:100%;height:100%;display:block;background:#0071E3;
+    transition:transform 0.3s cubic-bezier(0.25,0.45,0.5,1);transform:scale(0,1);transform-origin:right center;}
+a.more:hover>span {transform:scale(1,1);transform-origin:left center;}
+
+/* a.plus */
+a.plus {display:block;width:35px;height:35px;box-sizing:border-box;padding-top:4px;color:#101820;border:1px solid #101820;font-size:16px;text-align:center;
+    transition:all 0.4s ease 0s;opacity:0;transform:translateY(-50%);}
+.on a.plus {opacity:1;transform:translateY(0);}
+a.plus:hover {background-color:black;}
+
+a.plus i {transition:all 0.4s ease 0s;transform:rotateZ(0);}
+a.plus:hover i {transform:rotatez(90deg);color:#fff;}
+/* a.more:transition */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width:719px) {/* 1 */
+    .mob {display:none;}
+    .mobBtn {display:block;}
+    
+    /* ///////////////// layout ///////////////// */
+    #wrap {width:100%;overflow:hidden;}
+        header {z-index:20;position:absolute;top:0;left:0;width:100%;height:64px;}
+            .header_wrap {position:absolute;left:0;top:0;width:100%;height:64px;}
+                .header_inner {position:relative;width:100%;height:64px;margin:0 auto;text-align:center;}
+            .srch_wrap {z-index:10;position:absolute;left:0;top:64px;width:100%;border-bottom:1px solid #d8d8d8;}
+                .srch_inner {position:relative;width:100%;margin:0 auto;}
+        .main_visual {position:relative;width:100%;height:100vh;}
+    
+        main#container {width:100%;}
+            .content01,.content02,.content03,.content04 {position:relative;width:100%;height:100vh;box-sizing:border-box;overflow:hidden;background:#eee;}
+            .News {width:100%;padding:75px 20px;box-sizing:border-box;}
+            .Lounge {width:100%;padding:75px 20px;box-sizing:border-box;overflow:hidden;background:#f7f7f7;}
+            .CareerContactUs {width:100%;}
+            .content08 {position:relative;width:100%;height:60vh;box-sizing:border-box;}
+            .Now {width:100%;padding:75px 20px;box-sizing:border-box;}
+    
+        footer#footer {width:100%;padding:40px 0 0;border-top:1px solid #b2b2b2;}
+            .footer_inner {position:relative;width:100%;height:100%;}
+    /* ///////////////// layout ///////////////// */
+}
+@media screen and (min-width:720px) and (max-width:959px) {/* 2 */
+    .mob {display:none;}
+    .mobBtn {display:block;}
+    
+    /* ///////////////// layout ///////////////// */
+    #wrap {width:100%;overflow:hidden;}
+        header {z-index:20;position:absolute;top:0;left:0;width:100%;height:64px;}
+            .header_wrap {position:absolute;left:0;top:0;width:100%;height:64px;}
+                .header_inner {position:relative;width:100%;height:64px;margin:0 auto;text-align:center;}
+            .srch_wrap {z-index:10;position:absolute;left:0;top:0;width:100%;border-bottom:1px solid #d8d8d8;}
+                .srch_inner {position:relative;width:50%;max-width:550px;margin:0 auto;}
+        .main_visual {position:relative;width:100%;height:100vh;}
+    
+        main#container {width:100%;}
+            .content01,.content02,.content03,.content04 {position:relative;width:100%;height:100vh;box-sizing:border-box;overflow:hidden;background:#eee;}
+            .News {width:100%;padding:0 46px 70px;box-sizing:border-box;}
+            .Lounge {width:100%;padding:0 46px 70px;box-sizing:border-box;overflow:hidden;background:#f7f7f7;}
+            .CareerContactUs {width:100%;}
+            .content08 {position:relative;width:100%;height:450px;box-sizing:border-box;}
+            .Now {width:100%;padding:0 46px 75px;box-sizing:border-box;}
+    
+        footer#footer {width:100%;padding:40px 0 0;border-top:1px solid #b2b2b2;}
+            .footer_inner {position:relative;width:100%;height:100%;}
+    /* ///////////////// layout ///////////////// */
+}
+@media screen and (min-width:960px) and (max-width:1199px) { /* layout 변동 */
+    .mobBtn,.mob {display:none;}
+
+    /* ///////////////// layout ///////////////// */
+    #wrap {width:100%;overflow:hidden;}
+        header {z-index:20;position:absolute;top:0;left:0;width:100%;height:64px;}
+            .header_wrap {position:absolute;left:0;top:0;width:100%;height:64px;}
+                .header_inner {position:relative;width:100%;height:64px;margin:0 auto;text-align:center;}
+            .srch_wrap {z-index:10;position:absolute;left:0;top:0;width:100%;border-bottom:1px solid #d8d8d8;}
+                .srch_inner {position:relative;width:50%;max-width:550px;margin:0 auto;}
+        .main_visual {position:relative;width:100%;height:100vh;}
+    
+        main#container {width:100%;}
+            .content01,.content02,.content03,.content04 {position:relative;width:100%;height:100vh;box-sizing:border-box;overflow:hidden;background:#eee;}
+            .News {width:100%;padding:0 46px 70px;box-sizing:border-box;}
+            .Lounge {width:100%;padding:0 46px 70px;box-sizing:border-box;overflow:hidden;background:#f7f7f7;}
+            .CareerContactUs {width:100%;}
+            .content08 {position:relative;width:100%;height:450px;box-sizing:border-box;}
+            .Now {width:100%;padding:0 46px 75px;box-sizing:border-box;}
+    
+        footer#footer {width:100%;height:450px;padding:55px 46px 65px;box-sizing:border-box;border-top:1px solid #b2b2b2;}
+            .footer_inner {position:relative;width:100%;height:100%;}
+    /* ///////////////// layout ///////////////// */
+    
+}
+@media screen and (min-width:1200px) {/* PC */
+    .mobBtn,.mob {display:none;}
+
+    /* ///////////////// layout ///////////////// */
+    #wrap {width:100%;overflow:hidden;}
+        header {z-index:20;position:absolute;top:0;left:0;width:100%;height:64px;}
+            .header_wrap {position:absolute;left:0;top:0;width:100%;height:64px;}
+                .header_inner {position:relative;width:calc(100% - 92px);max-width:1380px;height:64px;margin:0 auto;text-align:center;}
+            .srch_wrap {z-index:20;position:absolute;left:0;top:0;width:100%;border-bottom:1px solid #d8d8d8;}
+                .srch_inner {position:relative;width:670px;margin:0 auto;}
+        .main_visual {position:relative;width:100%;height:100vh;}
+    
+        main#container {width:100%;}
+            .content01,.content02,.content03,.content04 {position:relative;width:100%;height:100vh;box-sizing:border-box;overflow:hidden;background:#eee;}
+            .News {width:100%;margin:110px auto;box-sizing:border-box;}
+            .Lounge {width:100%;height:1054px;overflow:hidden;background:#f7f7f7;box-sizing:border-box;}
+            .CareerContactUs {width:100%;box-sizing:border-box;padding:120px 0;}
+            .content08 {position:relative;width:100%;height:450px;box-sizing:border-box;}
+            .Now {width:100%;margin:110px auto;box-sizing:border-box;}
+    
+        footer#footer {width:100%;box-sizing:border-box;border-top:1px solid #b2b2b2;}
+            .footer_inner {position:relative;width:calc(100% - 92px);max-width:1380px;height:340px;margin:55px auto 65px;}
+    /* ///////////////// layout ///////////////// */
+}

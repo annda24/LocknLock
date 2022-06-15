@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocknLock - sub 2 | 정지선</title>
+<link rel="stylesheet" href="css/sub2.css">
+<link rel="stylesheet" href="css/import.css">
+<script src="https://kit.fontawesome.com/39dfc21e53.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/include.js"></script>
+</head>
+<body>
+<div id="skipNavi"><a href="#container">본문으로 바로가기</a></div>
+
+<!-- https://www.locknlock.com/kor/util/customer -->
+<div id="wrap">
+<!-- header -->
+<div id="header"></div>
+<!-- //header -->
+<hr/>
+<!-- container -->
+<div id="container">
+    <div class="content01">
+        <div class="inner">
+            <h2>문의하기</h2>
+            <p>A/S, 제품문의는 고객센터로 연락 주시면 바로 답변 받으실 수 있습니다.</p>
+            <div>
+                <h3>고객센터</h3>
+                <dl>
+                    <dt>TEL:</dt>
+                    <dd>080-329-3000</dd>
+                    <dd>평일:09시~18시(점심시간: 12시~13시), 공휴일 휴무</dd>
+                </dl>
+                <a class="black" href="#">바로가기</a>
+            </div>
+            <p>다량구매 및 B2B 특판 구매문의는 락앤락 자사몰에서 답변 받으실 수 있습니다.</p>
+            <div>
+                <h3>B2B 맞춤구매 문의</h3>
+                <a class="black" href="#">바로가기</a>
+            </div>
+        </div>
+    </div>
+    <div class="content02">
+        <div class="inner">
+            <h3>문의작성</h3>
+            <form action="/" method="post">
+            <fieldset>
+            <legend class="blind">문의작성</legend>
+            <dl>
+                <dt><label for="type">문의구분<span>*</span></label></dt>
+                <dd>
+                    <select id="type" placeholder="문의하고자하는 질문을 선택해주세요." required>
+                        <option value="기술협력">기술협력</option>
+                        <option value="기업관련">기업관련</option>
+                        <option value="마케팅 제휴">마케팅 제휴</option>
+                        <option value="해외법인">해외법인</option>
+                        <option value="입점 문의">입점 문의</option>
+                        <option value="채용 문의">채용 문의</option>
+                    </select>
+                </dd>
+                <dt>
+                    <label for="title">제목<span>*</span></label>
+                </dt>
+                <dd>
+                    <input type="text" id="title" required/>
+                </dd>
+                <dt>
+                    <label for="context">내용<span>*</span></label>
+                </dt>
+                <dd>
+                    <textarea id="context" cols="30" rows="10" placeholder="내용을 입력하세요." required></textarea>
+                </dd>
+                <dt>
+                    <label for="name">이름<span>*</span></label>
+                </dt>
+                <dd>
+                    <input type="text" id="name" required/>
+                </dd>
+                <dt>
+                    <label for="PhoneNumber">연락처<span>*</span></label>
+                </dt>
+                <dd>
+                    <input type="tel" id="PhoneNumber" placeholder="하이픈(-) 없이 입력" required/>
+                </dd>
+                <dt>
+                    <label for="Email">이메일<span>*</span></label>
+                </dt>
+                <dd>
+                    <input type="text" id="Email" required>
+                </dd>
+                <dt>첨부파일</dt>
+                <dd class="custom_file">
+                    <input type="text" disabled title="첨부파일 선택" />
+                    <label for="attachfile">파일찾기</label>
+                    <input type="file" id="attachfile" />
+                    <p>*50MB 이하의 파일만 등록 가능합니다.</p>
+                </dd>
+                <!-- 보안문자 생략 -->
+            </dl>
+            
+            <h3>약관동의</h3>
+            <input type="checkbox" id="agree_check" required/>
+            <label for="agree_check">개인정보 수집 및 이용에 대한 안내 (필수)</label>
+            <div class="agree">
+                <h4>■ 개인정보의 처리 목적</h4>
+                <p>회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.</p>
+                <ul>
+                    <li>고객 문의사항 답변 및 안내를 위한 고객의 정보 수집</li>
+                </ul>
+                <h4>■ 개인정보의 처리 및 보유기간</h4>
+                <p>고객문의에 활용하기 위해 수집된 개인정보의 처리 및 보유기간은 아래와 같습니다.</p>
+                <ul>
+                    <li>보존항목 : 고객 문의사항 답변 및 안내를 위한 고객의 정보</li>
+                    <li>보존기간 : 3년</li>
+                    <li>보존이유 : 개인 식별, 불량고객의 부정 이용 방지와 비인가 사용 방지, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달, 작성글 삭제 의사 확인</li>
+                </ul>
+                <p>다만, 관계법령의 규정에 의하여 보존할 필요성이 있는 정보 및 보유기간은 아래와 같습니다.</p>
+                <ol>
+                    <li>상업장부와 영업에 관한 중요서류에 포함된 정보 : 10년(상법)</li>
+                    <li>거래내역 및 증빙서류와 관련된 정보 : 5년(국세기본법, 법인세법)</li>
+                    <li>표시광고에 관한 기록 : 6개월(전자상거래 등에서의 소비자보호에 관한 법률)</li>
+                    <li>계약 또는 청약철회 등에 관한 기록 : 5년(전자상거래 등에서의 소비자보호에 관한 법률)</li>
+                    <li>대금결제 및 재화 등의 공급에 관한 기록 : 5년(전자상거래 등에서의 소비자보호에 관한 법률)</li>
+                    <li>소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</li>
+                    <li>기타 개별적으로 이용자의 동의를 받은 경우 : 동의 받은 기간</li>
+                </ol>
+                <p>* 보유기안 이후에는 물리적, 또는 논리적 파기를 합니다.</p>
+                <h4>■ 개인정보의 위탁</h4>
+                <p>회사[또는 담당부서명] 는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다.</p>
+
+                <ol class="list_style_kor">
+                    <li>고객센터 운영
+                        <ul>
+                            <li>위탁받는 자 (수탁자) : ㈜메타넷엠플랫폼</li>
+                            <li>위탁하는 업무의 내용 : 고객상담 및 클레임 처리</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    회사[또는 담당부서]는 위탁계약 체결시 개인정보보호법 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적 그리고 관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리 감독, 손해배상 등 책임에 관한 사항을 계약서 등에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.<br/>
+                    위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리 방침을 통하여 공개하도록 하겠습니다.
+                </p>
+                
+
+                <h4>■ 정보주체와 법정대리인의 권리・의무 및 행사방법</h4>
+                <ol>
+                    <li>정보주체는 회사에 언제든지 개인정보 열람・정정・삭제・처리정지 요구 등의 권리를 행사 할 수 있습니다.</li>
+                    <li>제1항에 따른 권리 행사는 회사에 대해 개인정보보호법 시행령 제41조 1항에 따라 서면, 전자우편 등을 통하여 하실 수 있으며, 회사는 이에 대해 지체없이 조치하겠습니다.</li>
+                    <li>제1항에 따른 권리 행사는 정보보호주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 “개인정보 처리 방법에 관한 고시(제2020-7호)” 별지 11호 서식에 따른 위임장을 제출하셔야 합니다.</li>
+                    <li>개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제할 될 수 있습니다.</li>
+                    <li>개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구 할 수 없습니다.</li>
+                    <li>회사는 정보주체 권리에 따른 열람의 요구, 정정 및 삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</li>
+                </ol>
+                <h4>■ 개인정보 처리 책임자 및 부서</h4>
+
+                <ol>
+                    <li>개인정보관리부서 : 인사운영팀</li>
+                    <li>개인정보관리 책임자
+                        <ul>
+                            <li>성명: 원유민 차장</li>
+                            <li>연락처: 02-520-9567.</li>
+                            <li>이메일 : privacy@locknlock.com</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4>■ 처리하는 개인정보 항목</h4>
+                <p>: 회사는 다음의 개인정보 항목을 처리하고 있습니다.</p>
+                <ol>
+                    <li>이름, 연락처, 이메일</li>
+                    <li>락앤락은 귀하에 대한 정보를 저장하고 수시로 찾아내는 ‘쿠키(cookie)’를 사용합니다. 쿠키는 웹사이트가 귀하의 컴퓨터 브라우저 (크롬, 엣지, 인터넷 익스플로러 등)로 전송하는 소량의 정보입니다. 귀하께서 웹사이트에 접속을 하면 락앤락의 컴퓨터는 귀하의 브라우저에 있는 쿠키의 내용을 읽고, 귀하의 추가정보를 귀하의 컴퓨터에서 찾아 접속에 따른 성명 등의 추가 입력 없이 서비스를 제공할 수 있습니다. 쿠키는 귀하의 컴퓨터는 식별하지만 귀하를 개인적으로 식별하지는 않습니다. 또한 귀하는 쿠키에 대한 선택권이 있습니다. 웹브라우저 상단의 도구>인터넷옵션 탭(option tab)에서 모든 쿠키를 다 받아들이거나, 쿠키가 설치될 때 통지를 보내도록 하거나, 아니면 모든 쿠키를 거부할 수 있는 선택권을 가질 수 있습니다.</li>
+                </ol>
+                <p>쿠키 수집정보</p>
+                <ul>
+                    <li>사용자 브라우저 agent정보</li>
+                    <li>사용자 브라우저의 사이즈(width, height)</li>
+                    <li>사용자IP</li>
+                    <li>사용자가 페이지에 접속한 시각</li>
+                    <li>사용자가 페이지에서 접속종료한 시각</li>
+                </ul>
+                <h4>■ 개인정보의 안전성 확보조치</h4>
+                <p>: 회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+                <ol>
+                    <li>관리적 조치: 내부관리계획 수립・시행, 정기적 직원 교육 등</li>
+                    <li>기술적 조치: 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템설치, 고유식별번호 등의 암호화, 보안프로그램 설치</li>
+                    <li>물리적 조치: 전산실 또는 물리적 보호가 필요한 장소에 대한 접근통제</li>
+                </ol>
+                <h4>■ 락앤락은 고객의 소중한 개인정보 보호를 위해 지속적인 노력을 하고 있습니다.</h4>
+                <p>: 고객의 개인정보를 소중한 가치로 여기고 개인정보를 최대한 안전하게 처리함에 있어서 아래와 같이 최선의 노력으로 관리하고 있습니다.</p>
+                
+                <ol>
+                    <li>
+                        고객의 개인정보를 암호화 하고 있습니다.
+                        <p>
+                            : 고객의 개인정보가 다루어지는 통신구간은 암호화 통신을 기반으로 하고, 저장되는 개인정보는 128bit 이상의 암호화로 보호되고 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        개인정보의 접근제어를 생활화 하고 있습니다.
+                        <p>
+                            : 개인정보를 처리하는 내부 조직과 인원을 최소화 하여, 꼭 필요한 업무에만 사용되며 해당시스템 접근과 데이터베이스의 상태를 실시간으로 모니터링 하고 있으며 개인정보를 처리하는 시스템의 비밀번호 관리와 접근관리의 권한에 대해 체계적인 관리를 위해 계속적인 감사와 조치를 반복하여 안전한 개인정보 관리에 최선을 다하고 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        개인정보 시스템의 물리적 접근은 통제하고 있습니다.
+                        <p>
+                            : 개인정보를 담고 있는 시스템의 위치는 비밀화 하고 운영관리 인력의 물리적 접근은 최소화 하여 운영하고 있으며, 시스템의 물리적인 접근절차에 따라 물리적 접근내역을 문서화 하여 관리 및 정기적인 내부감사를 통해 지속적으로 체계화 하고 있습니다.
+                        </p>
+                    </li>
+                </ol> 
+            </div>
+            <div class="ResetSubmit">
+                <input type="reset" value="초기화" class="reset" />
+                <input type="submit" value="제출" class="submit" />
+            </div>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //container -->
+<hr/>
+<!-- footer -->
+<div id="footer"></div>
+<!-- //footer -->
+
+<!-- floating btn to 락앤락몰-->
+<a class="btn_mall" href="#">락앤락몰</a>
+<!-- //floating btn to 락앤락몰-->
+</div>
+<!-- //wrap -->
+</body>
+</html>
